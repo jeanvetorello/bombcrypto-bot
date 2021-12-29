@@ -197,23 +197,18 @@ def positions(target, threshold=ct['default'],img = None):
     return rectangles
 
 def scroll():
-    commoms = positions(images['commom-text'], threshold=ct['commom'])
-    if (len(commoms) == 0):
-        commoms = positions(images['rare-text'], threshold=ct['rare'])
-        if (len(commoms) == 0):
-            commoms = positions(images['super_rare-text'], threshold=ct['super_rare'])
-            if (len(commoms) == 0):
-                commoms = positions(images['epic-text'], threshold=ct['epic'])
-                if (len(commoms) == 0):
-                    return
-    x,y,w,h = commoms[len(commoms)-1]
 
+    commoms = positions(images['commom-text'], threshold = ct['commom'])
+    if (len(commoms) == 0):
+        return
+    x,y,w,h = commoms[len(commoms)-1]
+#
     moveToWithRandomness(x,y,1)
 
     if not c['use_click_and_drag_instead_of_scroll']:
         pyautogui.scroll(-c['scroll_size'])
     else:
-        pyautogui.dragRel(0, -c['click_and_drag_amount'], duration=1, button='left')
+        pyautogui.dragRel(0,-c['click_and_drag_amount'],duration=1, button='left')
 
 
 def clickButtons():
