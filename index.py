@@ -610,7 +610,7 @@ def main():
                 page = 1
 
             last_change_page = now
-            pyautogui.hotkey('ctrl','f5')
+           # pyautogui.hotkey('ctrl','f5')
 
 
         if now - last[page]["new_map"] > t['check_for_new_map_button']:
