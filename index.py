@@ -18,7 +18,7 @@ ct = c['threshold']
 ch = c['home']
 pause = c['time_intervals']['interval_between_moviments']
 pyautogui.PAUSE = pause
-
+pyautogui.FAILSAFE = False
 cat = """
                                                 _
                                                 \`*-.
@@ -603,7 +603,8 @@ def main():
                 page = 1
 
             last_change_page = now
-            pyautogui.hotkey('alt','tab')
+            pyautogui.hotkey('ctrl','f5')
+
 
         if now - last[page]["new_map"] > t['check_for_new_map_button']:
             last[page]["new_map"] = now
