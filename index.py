@@ -319,7 +319,7 @@ def goToGame():
     clickBtn(images['treasure-hunt-icon'])
 
 def refreshHeroesPositions():
-
+    clickBtn(images['reload_browser'])
     logger('🔃 Refreshing Heroes Positions')
     clickBtn(images['go-back-arrow'])
     clickBtn(images['treasure-hunt-icon'])
