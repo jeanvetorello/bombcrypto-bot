@@ -300,6 +300,12 @@ def clickFullBarButtons():
 
     return len(not_working_full_bars)
 
+def reloadPage():
+    #f5
+    pyautogui.hotkey('ctrl','f5')
+    sys.stdout.write('\nRefreshing page.\n')
+    return
+  
 def goToHeroes():
     if clickBtn(images['go-back-arrow']):
         global login_attempts
@@ -481,13 +487,18 @@ def main():
     "heroes" : 0,
     "new_map" : 0,
     "check_for_captcha" : 0,
-    "refresh_heroes" : 0
+    "refresh_heroes" : 0,
+    "reload_page: 0
     }
     # =========
 
     while True:
         now = time.time()
-
+        if now - last["reloadPage"] > addRandomness(t['reloadPage'] * 60):
+            last["reloadPage"] = now
+            reloadPage()
+ 
+            
         if now - last["check_for_captcha"] > addRandomness(t['check_for_captcha'] * 60):
             last["check_for_captcha"] = now
 
