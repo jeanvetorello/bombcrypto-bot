@@ -342,7 +342,9 @@ def login():
         login_attempts = 0
         pyautogui.hotkey('ctrl','f5')
         return
-
+    if clickBtn(images['ok_brave'], timeout=5):
+        reloadPage()
+        pass
     if clickBtn(images['connect-wallet'], timeout = 10):
         logger('🎉 Connect wallet button detected, logging in!')
         login_attempts = login_attempts + 1
