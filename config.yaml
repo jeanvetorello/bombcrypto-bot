@@ -5,6 +5,8 @@
   # [pt_BR] Configurações de intervalos de tempo
   #
   time_intervals:
+    #reload page interval crtl + f5
+    reload_page: 160
     # [en_US] Time interval for check if there are available heroes to work
     # Default value (in minutes): 10
     #
