@@ -494,8 +494,8 @@ def main():
 
     while True:
         now = time.time()
-        if now - last["reloadPage"] > addRandomness(t['reloadPage'] * 60):
-            last["reloadPage"] = now
+        if now - last["reload_page"] > addRandomness(t['reload_page'] * 60):
+            last["reload_page"] = now
             reloadPage()
  
             
