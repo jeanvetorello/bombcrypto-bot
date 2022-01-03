@@ -5,45 +5,47 @@
   # [pt_BR] Configurações de intervalos de tempo
   #
   time_intervals:
-    #reload page interval crtl + f5
-    reload_page: 160
+    #[pt-br] Intervalo de tempo para mudar de página (ALT + TAB)
+    # Valor padrão (em minutos): 2
+    change_page: 2
+
     # [en_US] Time interval for check if there are available heroes to work
     # Default value (in minutes): 10
     #
     # [pt_BR] Intervalo de tempo para verificar se há heróis disponíveis para trabalhar
     # Valor padrão (em minutos): 10
-    send_heroes_for_work: 10
-    
+    send_heroes_for_work: 5
+
     # [en_US] Time interval to update heroes position in the map,
     # Default value (in minutes): 3
     #
     # [pt_BR] Intervalo de tempo para atualizar a posição dos heróis no mapa
     # Valor padrão (em minutos): 3
-    refresh_heroes_positions: 3
-    
+    refresh_heroes_positions: 5
+
     # [en_US] Time interval to check for new maps
-    # Default value (in minutes): 5 
+    # Default value (in minutes): 5
     #
     # [pt_BR] Intervalo de tempo para verificar por novos mapas
     # Valor padrão (em segundos): 5
-    check_for_new_map_button: 5
-    
+    check_for_new_map_button: 0.5
+
     # [en_US] Time interval to check for captcha.
     # Default value (in minutes): 1
     #
     # [pt_BR] Intervalo de tempo para verificar se precisa resolver o captcha.
     # Valor padrão (em minutos): 1
-    check_for_captcha: 1
+    check_for_captcha: 360
 
     # [en_US] Time interval to check for login request
     # Default value (in minutes): 3
     #
     # [pt_BR] Intervalo de tempo para verificar se existe solicitação de login
     # Valor padrão (em minutos): 5
-    check_for_login: 5
+    check_for_login: 2
 
     # [en_US] Time interval between moviments
-    # Default value (in seconds): 1 
+    # Default value (in seconds): 1
     #
     # [pt_BR] Intervalo de tempo entre movimentos
     # Valor padrão (em segundos): 1
@@ -62,11 +64,39 @@
     default: 0.7
 
     # [en_US]
+    # Default value: 0.7
+    #
+    # [pt_BR]
+    # Valor padrão: 0.7
+    rest: 0.9
+
+    # [en_US]
     # Default value: 0.8
     #
     # [pt_BR]
     # Valor padrão: 0.8
     commom: 0.8
+
+    # [en_US]
+    # Default value: 0.8
+    #
+    # [pt_BR]
+    # Valor padrão: 0.8
+    rare: 0.8
+
+    # [en_US]
+    # Default value: 0.8
+    #
+    # [pt_BR]
+    # Valor padrão: 0.8
+    super_rare: 0.8
+
+    # [en_US]
+    # Default value: 0.8
+    #
+    # [pt_BR]
+    # Valor padrão: 0.8
+    epic: 0.8
 
     # [en_US]
     # Default value: 0.8
@@ -81,6 +111,54 @@
     # [pt_BR]
     # Valor padrão: 0.9
     go_to_work_btn: 0.9
+
+    # Total baus roxo
+    # [en_US]
+    # Default value: 0.7
+    #
+    # [pt_BR]
+    # Valor padrão: 0.7
+    bau_roxo: 0.7
+
+    # Total baus roxo pouca vida
+    # [en_US]
+    # Default value: 0.8
+    #
+    # [pt_BR]
+    # Valor padrão: 0.8
+    bau_roxo_50: 0.8
+
+    # Total baus roxo
+    # [en_US]
+    # Default value: 0.7
+    #
+    # [pt_BR]
+    # Valor padrão: 0.7
+    bau_gold: 0.7
+
+    # Total baus roxo pouca vida
+    # [en_US]
+    # Default value: 0.8
+    #
+    # [pt_BR]
+    # Valor padrão: 0.8
+    bau_gold_50: 0.8
+
+    # Total baus roxo
+    # [en_US]
+    # Default value: 0.7
+    #
+    # [pt_BR]
+    # Valor padrão: 0.7
+    bau_blue: 0.7
+
+    # Total baus roxo pouca vida
+    # [en_US]
+    # Default value: 0.8
+    #
+    # [pt_BR]
+    # Valor padrão: 0.8
+    bau_blue_50: 0.8
 
     # [en_US]
     # Default value: 0.9
@@ -109,7 +187,7 @@
   #
   # [pt_BR]
   # Valor padrão: 3
-  scroll_attemps: 3
+  scroll_attemps: 5
 
   # [en_US]
   # Default value: true
