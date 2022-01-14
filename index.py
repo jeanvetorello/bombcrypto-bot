@@ -248,7 +248,7 @@ def isWorking(bar, buttons):
 
 def clickGreenBarButtons():
     # ele clicka nos q tao trabaiano mas axo q n importa
-    offset = 140
+    offset = 100
 
     green_bars = positions(images['green-bar'], threshold=ct['green_bar'])
     logger('🟩 %d green bars detected' % len(green_bars))
@@ -280,7 +280,7 @@ def clickGreenBarButtons():
     return len(not_working_green_bars)
 
 def clickFullBarButtons():
-    offset = 100
+    offset = 90
     full_bars = positions(images['full-stamina'], threshold=ct['default'])
     buttons = positions(images['go-work'], threshold=ct['go_to_work_btn'])
 
@@ -529,7 +529,7 @@ def main():
 
         sys.stdout.flush()
 
-        time.sleep(1)
+        time.sleep(4)
 
 
 
