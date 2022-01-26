@@ -337,7 +337,7 @@ def login():
     global login_attempts
     logger('😿 Checking if game has disconnected')
 
-    if login_attempts > 3:
+    if login_attempts > 5:
         logger('🔃 Too many login attempts, refreshing')
         login_attempts = 0
         pyautogui.hotkey('ctrl','f5')
