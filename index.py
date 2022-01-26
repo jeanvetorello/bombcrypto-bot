@@ -488,7 +488,7 @@ def main():
     "login" : 0,
     "heroes" : 0,
     "new_map" : 0,
-    "check_for_captcha" : 0,
+    "check_for_error" : 0,
     "refresh_heroes" : 0,
     "reload_page" : 0
     }
@@ -501,8 +501,9 @@ def main():
             reloadPage()
  
             
-        if now - last["check_for_captcha"] > addRandomness(t['check_for_captcha'] * 60):
-            last["check_for_captcha"] = now
+        if now - last["check_for_error"] > addRandomness(t['check_for_error'] * 60):
+            last["check_for_error"] = now
+            reloadPage()
 
         if now - last["heroes"] > addRandomness(t['send_heroes_for_work'] * 60):
             last["heroes"] = now
