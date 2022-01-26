@@ -503,7 +503,9 @@ def main():
             
         if now - last["check_for_error"] > addRandomness(t['check_for_error'] * 60):
             last["check_for_error"] = now
-            reloadPage()
+            if clickBtn(images['error-general'], timeout = 2):
+              logger('🎉 Connect wallet button detected, logging in!')
+              reloadPage()
 
         if now - last["heroes"] > addRandomness(t['send_heroes_for_work'] * 60):
             last["heroes"] = now
