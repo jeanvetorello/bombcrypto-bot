@@ -502,9 +502,10 @@ def main():
  
             
         if now - last["check_for_error"] > addRandomness(t['check_for_error'] * 60):
+            logger('CHECKING ERROR PAGE')
             last["check_for_error"] = now
             if clickBtn(images['error_general'], timeout = 2):
-              logger('XXXX GENERAL detected, RELOAD PAGE!')
+              logger('XXXX ERROR GENERAL detected, RELOAD PAGE!')
               reloadPage()
 
         if now - last["heroes"] > addRandomness(t['send_heroes_for_work'] * 60):
