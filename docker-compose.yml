@@ -3,8 +3,7 @@ services:
   bot1:
     container_name: bot1
     tty: true
-    build:
-      context: .
+    image: bot
     restart: unless-stopped
     cap_add:
       # Google Chrome
