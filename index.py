@@ -352,7 +352,7 @@ def login():
         logger('username clicled', emoji='✔️')
         time.sleep(1)
         if clickButton(password):  ## twice because metamask glitch
-            logger('password, emoji='✔️')
+            logger('password buttonn', emoji='✔️')
         # time.sleep(25)
         
         
