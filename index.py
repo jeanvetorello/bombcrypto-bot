@@ -344,11 +344,6 @@ def login():
         pyautogui.hotkey('ctrl','f5')
         return
 
-    if clickBtn(images['username'], timeout=1):
-        pyautogui.typewrite("testeuser", interval=0.1)
-        time.sleep(1)
-    if clickBtn(images['password'], timeout=1): ## twice because metamask glitch
-        pyautogui.typewrite("testepassword", interval=0.1)
     
     if clickBtn(images['ok_brave'], timeout=5):
         reloadPage()
@@ -356,6 +351,11 @@ def login():
     if clickBtn(images['connect-wallet'], timeout = 10):
         logger('🎉 Connect wallet button detected, logging in!')
         login_attempts = login_attempts + 1
+        if clickBtn(images['username'], timeout=1):
+            pyautogui.typewrite("testeuser", interval=0.1)
+        time.sleep(1)
+
+
         #TODO mto ele da erro e poco o botao n abre
         # time.sleep(10)
 
