@@ -354,10 +354,7 @@ def login():
         if clickBtn(images['password'], timeout=1): ## twice because metamask glitch
        #     logger('password buttonn', emoji='✔️')
         # time.sleep(25)
-        
-        
-
-
+    
     if clickBtn(images['ok_brave'], timeout=5):
         reloadPage()
         pass
