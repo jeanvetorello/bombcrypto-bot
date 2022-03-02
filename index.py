@@ -344,13 +344,11 @@ def login():
         pyautogui.hotkey('ctrl','f5')
         return
 
-    user_coord = positions(images['username'])
-    if user_coord is not False:
-        if clickBtn(images['username'], timeout=1):
-            pyautogui.typewrite("testepassword", interval=0.1)
+    if clickBtn(images['username'], timeout=1):
+        pyautogui.typewrite("testeuser", interval=0.1)
         time.sleep(1)
-        if clickBtn(images['password'], timeout=1): ## twice because metamask glitch
-            pyautogui.typewrite("testepassword", interval=0.1)
+    if clickBtn(images['password'], timeout=1): ## twice because metamask glitch
+        pyautogui.typewrite("testepassword", interval=0.1)
     
     if clickBtn(images['ok_brave'], timeout=5):
         reloadPage()
