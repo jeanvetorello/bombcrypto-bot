@@ -333,6 +333,7 @@ def refreshHeroesPositions():
     # time.sleep(3)
     clickBtn(images['treasure-hunt-icon'])
 
+
 def login():
     global login_attempts
     logger('😿 Checking if game has disconnected')
@@ -342,6 +343,13 @@ def login():
         login_attempts = 0
         pyautogui.hotkey('ctrl','f5')
         return
+
+    user_coord = positions(images['username'])
+    if user_coord is not False:
+        password = metamask_data["testeuser"]
+        pyautogui.typewrite(password, interval=0.1)
+
+
     if clickBtn(images['ok_brave'], timeout=5):
         reloadPage()
         pass
