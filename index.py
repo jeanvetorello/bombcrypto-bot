@@ -346,8 +346,8 @@ def login():
 
     user_coord = positions(images['username'])
     if user_coord is not False:
-        password = metamask_data["testeuser"]
-        pyautogui.typewrite(password, interval=0.1)
+        #password = metamask_data["testeuser"]
+        pyautogui.typewrite("testepassword", interval=0.1)
 
 
     if clickBtn(images['ok_brave'], timeout=5):
